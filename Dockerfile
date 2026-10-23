@@ -13,4 +13,4 @@ COPY . .
 
 EXPOSE 8080
 
-CMD ["sh", "-c", "python app/manage.py migrate --noinput && python app/manage.py runserver 0.0.0.0:8080"]
+CMD ["sh", "-c", "python app/manage.py migrate --noinput && python app/manage.py runserver 0.0.0.0:8080 & python app/manage.py botrun"]
