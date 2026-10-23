@@ -106,7 +106,7 @@ async def create_or_get_session(
         # Agar OTP orqali telegram_id qidirish ishlatilsa,
         # shu kesh yozuvi ham saqlanadi.
         await cache.aset(
-            otp_code,
+            f"otp:{otp_code}",
             str(telegram_id),
             timeout=OTP_INTERVAL,
         )

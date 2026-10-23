@@ -35,7 +35,7 @@ async def login_otp(
 
     # 2. OTP orqali Telegram ID ni olish
     try:
-        telegram_id = await cache.aget(otp)
+        telegram_id = await cache.aget(f"otp:{otp}")
     except Exception:
         logger.exception("OTP keshini o‘qishda xato")
         raise Forbidden(detail="Autentifikatsiya xatosi")
