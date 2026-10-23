@@ -13,4 +13,4 @@ COPY . .
 
 EXPOSE 8080
 
-CMD ["python", "manage.py", "runbolt", "--host", "0.0.0.0", "--port", "8080"]
+CMD ["python", "./app/manage.py", "runbolt", "--host", "0.0.0.0", "--port", "8080"]
